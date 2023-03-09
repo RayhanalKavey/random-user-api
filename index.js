@@ -15,7 +15,8 @@ const newUser = {};
 // Database connection
 dbConnect();
 
-app.use("/api/v1/user", userRouter);
+// app.use("/api/v1/user", userRouter);
+app.use("/user", userRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Random User Server");

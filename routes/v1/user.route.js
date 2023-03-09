@@ -13,6 +13,7 @@ router
    *@apiDescription get all user
    */
   .get("/all", userController.getAllUser)
+  .post("/save", userController.saveUser)
   .patch("/update", userController.updateAUser)
   .patch("/bulk-update", userController.updateBulkUser)
   .delete("/delete", userController.deleteUser);

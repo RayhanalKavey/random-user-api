@@ -1,11 +1,17 @@
-const users = require("../randomUser.json");
+let users = require("../randomUser.json");
 // console.log(users);
 module.exports.getRandomUser = (req, res) => {
-  res.send("Get a random user.");
+  // Generate a random index number
+  const randomIndex = Math.floor(Math.random() * users.length);
+  // Return the user object at the random index
+  res.json(users[randomIndex]);
 };
 
 module.exports.getAllUser = (req, res) => {
   res.send(users);
+};
+module.exports.saveUser = (req, res) => {
+  res.json("Save user");
 };
 
 module.exports.updateAUser = (req, res) => {
