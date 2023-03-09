@@ -2,9 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dbConnect = require("./utils/dbConnect");
 require("dotenv").config();
-
-const user = require("./randomUser.json");
-console.log(user);
+const users = require("./randomUser.json");
+const userRouter = require("./routes/v1/user.route");
 
 const app = express();
 const port = process.env.PORT || 5004;
@@ -17,8 +16,14 @@ const newUser = {};
 // Database connection
 dbConnect();
 
+app.use("/api/v1/user", userRouter);
+
 app.get("/", (req, res) => {
   res.send("Welcome to the Random User Server");
+});
+
+app.all("*", (req, res) => {
+  res.send("!!!!!!------ No Route Found -----!!!!!!!");
 });
 
 app.listen(port, () => {
