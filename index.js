@@ -3,11 +3,17 @@ const cors = require("cors");
 const dbConnect = require("./utils/dbConnect");
 require("dotenv").config();
 
+const user = require("./randomUser.json");
+console.log(user);
+
 const app = express();
 const port = process.env.PORT || 5004;
 
 // MIDDLEWARE
+app.use(cors());
+// app.use(express.json());
 
+const newUser = {};
 // Database connection
 dbConnect();
 
