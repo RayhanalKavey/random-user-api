@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const dbConnect = require("./utils/dbConnect");
 require("dotenv").config();
-const users = require("./randomUser.json");
 const userRouter = require("./routes/v1/user.route");
 
 const app = express();
@@ -10,7 +9,7 @@ const port = process.env.PORT || 5004;
 
 // MIDDLEWARE
 app.use(cors());
-// app.use(express.json());
+app.use(express.json());
 
 const newUser = {};
 // Database connection
