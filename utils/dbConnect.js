@@ -1,4 +1,4 @@
-function bdConnect() {
-  console.log("Db Connect.");
+function dbConnect() {
+  console.log("Db Connected.");
 }
 module.exports = dbConnect;
