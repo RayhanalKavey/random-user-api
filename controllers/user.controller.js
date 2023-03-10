@@ -53,7 +53,23 @@ module.exports.updateAUser = (req, res) => {
 };
 
 module.exports.updateBulkUser = (req, res) => {
-  res.send("Update multiple user.");
+  let updatedValues = req.body;
+  ///
+  console.log(updatedValues);
+
+  for (let i = 0; i < updatedValues.length; i++) {
+    let currentUpdate = updatedValues[i];
+    let indexToUpdate = users.findIndex((obj) => obj.id === currentUpdate.id);
+
+    if (indexToUpdate !== -1) {
+      for (let prop in currentUpdate) {
+        if (prop in users[indexToUpdate]) {
+          users[indexToUpdate][prop] = currentUpdate[prop];
+        }
+      }
+    }
+  }
+  res.send(users);
 };
 
 module.exports.deleteUser = (req, res) => {
