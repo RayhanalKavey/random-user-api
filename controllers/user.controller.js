@@ -32,7 +32,24 @@ module.exports.saveUser = (req, res) => {
 };
 
 module.exports.updateAUser = (req, res) => {
-  res.send("Update users.");
+  const newInfo = req.body;
+  const targetUser = users.find((user) => user?.id === newInfo?.id);
+  if (targetUser) {
+    // Find the index of the object with the matching id
+    let indexToUpdate = users.findIndex((obj) => obj.id === newInfo.id);
+
+    // Loop through the keys of updatedValue object
+    for (let prop in newInfo) {
+      // Check if the object in the array has the property
+      if (prop in users[indexToUpdate]) {
+        // Update the property with the new value
+        users[indexToUpdate][prop] = newInfo[prop];
+      }
+    }
+    res.send(users);
+  } else {
+    res.send("Update unsuccessful. No user found.");
+  }
 };
 
 module.exports.updateBulkUser = (req, res) => {
@@ -45,6 +62,7 @@ module.exports.deleteUser = (req, res) => {
   if (users.find((user) => user?.id === id)) {
     users = users.filter((user) => user.id !== id);
     res.send(users);
+    // res.send("Delete Succssful.");
   } else {
     res.send("Delete unsuccessful. No user found.");
   }
