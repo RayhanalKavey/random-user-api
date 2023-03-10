@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "gender": "male",
+    "name": "John Doe",
+    "contact": "+1 123-456-7890",
+    "address": "123 Main St, Anytown USA",
+    "photoUrl": "https://example.com/johndoe.jpg"
+  },
+  {
+    "id": 2,
+    "gender": "female",
+    "name": "Jane Smith",
+    "contact": "+1 234-567-8901",
+    "address": "456 Elm St, Anytown USA",
+    "photoUrl": "https://example.com/janesmith.jpg"
+  },
+  {
+    "id": 3,
+    "gender": "non-binary",
+    "name": "Alex Lee",
+    "contact": "+1 345-678-9012",
+    "address": "789 Oak St, Anytown USA",
+    "photoUrl": "https://example.com/alexlee.jpg"
+  },
+
+  {
+    "id": 4,
+    "gender": "male",
+    "name": "Mike Johnson",
+    "contact": "+1 456-789-0123",
+    "address": "321 Maple St, Anytown USA",
+    "photoUrl": "https://example.com/mikejohnson.jpg"
+  },
+  {
+    "id": 5,
+    "gender": "female",
+    "name": "Emily Kim",
+    "contact": "+1 567-890-1234",
+    "address": "654 Pine St, Anytown USA",
+    "photoUrl": "https://example.com/emilykim.jpg"
+  },
+  {
+    "id": 6,
+    "gender": "non-binary",
+    "name": "Jordan Patel",
+    "contact": "+1 678-901-2345",
+    "address": "987 Cedar St, Anytown USA",
+    "photoUrl": "https://example.com/jordanpatel.jpg"
+  },
+  {
+    "id": 7,
+    "gender": "male",
+    "name": "Adam Davis",
+    "contact": "+1 789-012-3456",
+    "address": "246 Oak St, Anytown USA",
+    "photoUrl": "https://example.com/adamdavis.jpg"
+  },
+  {
+    "id": 8,
+    "gender": "female",
+    "name": "Samantha Brown",
+    "contact": "+1 890-123-4567",
+    "address": "369 Elm St, Anytown USA",
+    "photoUrl": "https://example.com/samanthabrown.jpg"
+  }
+]
